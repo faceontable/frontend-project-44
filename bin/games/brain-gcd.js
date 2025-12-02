@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 import { runGame, askQuestion } from "../../src/index.js"
 
+function rules() {
+    console.log("Find the greatest common divisor of given numbers.")
+}
+
 // Игра: "НОД"
 function brainEven() {
     const gcd = (a, b) => {
@@ -21,5 +25,4 @@ function checkAnswer(result, answer) {
     return answer === result
 }
 
-console.log("Find the greatest common divisor of given numbers.")
-runGame(brainEven, checkAnswer)
+runGame(rules, brainEven, checkAnswer)

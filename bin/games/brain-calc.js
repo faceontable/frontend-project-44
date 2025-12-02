@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 import { runGame, askQuestion } from "../../src/index.js"
 
+function rules() {
+    console.log("What is the result of the expression?")
+}
+
 // Игра: "Калькулятор"
 function brainCalc() {
     const first = Math.floor(Math.random() * 100) + 1
@@ -33,5 +37,4 @@ function checkAnswer(expected, actual) {
     return expected === Number(actual)
 }
 
-console.log("What is the result of the expression?")
-runGame(brainCalc, checkAnswer)
+runGame(rules, brainCalc, checkAnswer)

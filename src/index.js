@@ -3,11 +3,13 @@ import readlineSync from 'readline-sync';
 import { greetUserAndGetUserName, printGameResult } from "../src/cli.js"
 
 // A generic function to run a game action
-export function runGame(action, checkAnswer) {
+export function runGame(rules, action, checkAnswer) {
     const userName = greetUserAndGetUserName()
 
+    rules()
+
     let rightAnswersCounter = 0
-    
+
     while (rightAnswersCounter < 3) {
         const result = action()
         const answer = readlineSync.question('Your answer: ');
