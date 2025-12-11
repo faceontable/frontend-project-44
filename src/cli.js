@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 // Function to greet the user and get their name
 export function greetUserAndGetUserName() {
     console.log('Welcome to the Brain Games!')
-    const name = readlineSync.question('Your answer: May I have your name? ');
+    const name = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${name}!`)
     return name
 }
