@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { runGame, askQuestion } from "../../src/index.js"
 
 function rules() {
