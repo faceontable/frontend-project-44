@@ -1,11 +1,7 @@
 import { runGame, askQuestion } from "../../src/index.js"
 
-function rules() {
-    console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".")
-}
-
 // Игра "Простое ли число?"
-function brainPrime() {
+const brainPrime = () => {
     const isPrime = (num) => {
         if (num < 2) {
             return false
@@ -27,8 +23,8 @@ function brainPrime() {
     return isPrime(number) ? 'yes' : 'no'
 }
 
-function checkAnswer(result, answer) {
-    return answer === result
-}
+const rules = () => console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".")
+
+const checkAnswer = (result, answer) => answer === result
 
 export default function run() { return runGame(rules, brainPrime, checkAnswer) }
